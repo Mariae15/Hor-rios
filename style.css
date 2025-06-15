@@ -21,7 +21,7 @@
     border-radius: 30px;
     overflow: hidden;
     background-color: white;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.744);
     position: relative;
   }
   
@@ -99,6 +99,12 @@
     float: left;
     margin-right: 15px;
     cursor: pointer;
+    box-shadow: 0 4px 15px rgba(67, 135, 187, 0.689);
+    transition: transform 0.3s;
+  }
+
+  .escolha img:hover{
+    transform: scale(1.2);
   }
   
   .escolha h2 {
@@ -110,10 +116,16 @@
     padding: 20px 150px;
     height: 70px;
     font-weight: 400;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(67, 135, 187, 0.689);
     clear: both;
     cursor: pointer;
+    transition: transform 0.3s;
   }
+
+  .escolha h2:hover{
+     transform: scale(1.2);
+  }
+
   
   .aluno{
     display: flex;
