@@ -13,7 +13,7 @@
     height: 100vh;
   }
 
-  .monitoria {
+  .caixa {
     display: flex;
     flex-direction: row;
     width: 950px;
@@ -26,52 +26,57 @@
   }
   
 
-  .monitoria::before {
+  .caixa::before {
     content: "";
     width: 35%;
-    background-color: #1a73b8;
-    background-image: url("img/aluno-professor.png");
+    background-image: url(img/aluno-professor.png);
+    background-color: #47a7da;
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: contain;
+    background-position-y: 160px;
+    background-size: 700px;
     display: block;
   }
   
-  .monitoria h3,
-  .monitoria p {
+  .caixa h3,
+  .caixa p {
     position: absolute;
-    left: 40px;
+    left: 30px;
     color: white;
-    text-align: left;
+    text-align: center;
     z-index: 2;
     width: 280px;
   }
   
-  .monitoria h3 {
-    top: 40px;
-    font-size: 26px;
+  .caixa h3 {
+    top: 20px;
+    font-size: 35px;
     font-family: 'Concert One', sans-serif;
+    text-align: center;
   }
   
-  .monitoria h3 strong {
+  .caixa h3 strong {
     color: #000d6b;
   }
   
-  .monitoria p:nth-of-type(1) {
-    top: 90px;
-    font-size: 18px;
+  .caixa p:nth-of-type(1) {
+    top: 70px;
+    font-size: 20px;
     font-weight: bold;
+    text-align: center;
   }
   
-  .monitoria p:nth-of-type(2) {
-    top: 140px;
-    font-size: 14px;
+  .caixa p:nth-of-type(2) {
+    top: 130px;
+    font-size: 16px;
     font-weight: normal;
     line-height: 1.4;
+    text-align: center;
   }
   
-  .monitoria > img {
-    display: none;
+  .monitoria img {
+    display: flex;
+    height: 10px;
   }
   
   /* Lado direito com os botões */
@@ -81,27 +86,41 @@
     justify-content: center;
     align-items: center;
     gap: 40px;
+    flex-direction: column;
   }
   
   .escolha img {
-    width: 100px;
-    height: 100px;
-    background-color: #70cbff;
+    width: 120px;
+    height: 110px;
+    background-color: #47a7da;
     border-radius: 50%;
-    padding: 5px;
+    padding: 10px;
     object-fit: cover;
     float: left;
     margin-right: 15px;
+    cursor: pointer;
   }
   
   .escolha h2 {
-    background-color: #70cbff;
+    background-color: #47a7da;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
+    text-align: center;
     border-radius: 40px;
-    padding: 30px 40px;
-    font-weight: 500;
+    padding: 20px 150px;
+    height: 70px;
+    font-weight: 400;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     clear: both;
+    cursor: pointer;
   }
   
+  .aluno{
+    display: flex;
+    align-items: center;
+  }
+
+  .pedagogia{
+    display: flex;
+    align-items: center;
+  }
