@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Horário Escolar</title>
+  <link rel="stylesheet" href="/css/aluno.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header><h1>AGV - Aluno</h1>
+  <main>
+      <div class="linhadoformulario">
+    <label for="turma">Selecione sua turma:</label>
+    <select id="turma">
+      <option class="escolha" value="">Escolha</option>
+      <option value="6A">6º A</option>
+      <option value="6B">6º B</option>
+      <option value="7A">7º A</option>
+    </select>
+
+    <label for="turno">Selecione o turno:</label>
+    <select id="turno">
+      <option class="escolha" value="">Escolha</option>
+      <option value="manha">Manhã</option>
+      <option value="tarde">Tarde</option>
+      <option value="noite">Noite</option>
+    </select>
+    <div class="botao">
+     <button onclick="mostrarHorario()">Ver Horário</button>
+    </div>
+    </div>
+    <div id="horario"></div>
+  </main>
+  </header>
+
+  <script src="/js/aluno.js"></script>
+</body>
+</html>
