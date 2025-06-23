@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;600&display=swap');
+
+body {
+    background-color: #70cbff;
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 30px;
+    font-style: normal;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 15px white;
+}
+
+.logo {
+    font-family: 'Concert One', sans-serif;
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    color: #47a7da;
+}
+
+.centro{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 6px;
+    background: white;
+    border: 1px solid #47a7da;
+    color: #fff;
+    font-size: 16px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #47a7da;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    color: white;
+    justify-content: center
+}
+
+.login-form button:hover {
+   background-color: #327295;
+}
+
+#error-message {
+    color: #981313d5;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.cadastro-link p{
+    color: #47a7da;
+    font-size: 15px;
+}
+
+.cadastro-link a{
+    text-decoration: none;
+    color: #2d88b9;
+}
