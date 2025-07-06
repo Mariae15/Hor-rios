@@ -10,29 +10,35 @@
   <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header><h1>AGV - Aluno</h1>
   <main>
-      <div class="linhadoformulario">
-    <label for="turma">Selecione sua turma:</label>
-    <select id="turma">
-      <option class="escolha" value="">Escolha</option>
-      <option value="6A">6º A</option>
-      <option value="6B">6º B</option>
-      <option value="7A">7º A</option>
-    </select>
+  <div class="formulário">
+      <label for="turma">Turma:</label>
+      <select id="turma">
+        <option class="escolha" value="">Escolha</option>
+        <option value="6A">6º A</option>
+        <option value="6B">6º B</option>
+        <option value="7A">7º A</option>
+      </select>
 
-    <label for="turno">Selecione o turno:</label>
-    <select id="turno">
-      <option class="escolha" value="">Escolha</option>
-      <option value="manha">Manhã</option>
-      <option value="tarde">Tarde</option>
-      <option value="noite">Noite</option>
-    </select>
-    <div class="botao">
-     <button onclick="mostrarHorario()">Ver Horário</button>
-    </div>
-    </div>
-    <div id="horario"></div>
+ 
+      <label for="turma">Grau:</label>
+      <select id="Grau">
+        <option class="escolha" value="">Escolha</option>
+        <option value="6A">primeiro</option>
+        <option value="6B">segundo</option>
+        <option value="7A">terceiro</option>
+      </select>
+
+      <label for="turno">Turno:</label>
+      <select id="turno">
+        <option class="escolha" value="">Escolha</option>
+        <option value="manha">Manhã</option>
+        <option value="tarde">Tarde</option>
+        <option value="noite">Noite</option>
+      </select>
+ 
+
+  </div>
   </main>
   </header>
 
