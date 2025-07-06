@@ -1,67 +1,43 @@
-body {
-  font-family: 'Outfit', sans-serif;
-  background: #70cbff;
-  margin: 0;
-  padding: 0;
+body{
+  background-color: #70cbff;
+  background-image: url(/img/fundo.png);
+  background-position-x: center;
+  background-position-y: -200px;
+  background-size:2000px;
+}
+
+.formulário{
   display: flex;
+  justify-content: center;
+  align-items: center;  
   flex-direction: column;
-  align-items: center;
-}
-
-header {
   background-color: #47a7da;
-  background-image: linear-gradient(to bottom, #47a7da 0, #47a7da 40%, white 0, white 60%);
-  color: #47a7da;
-  padding: 5px;
-  width: 100%;
-  text-align: center;
-  font-size: 24px;
-  font-family: 'Concert One', sans-serif;
-}
-
-header h1{
-  margin-top: 0;
-  color: white;
-}
-
-.linha-formulario {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-.linha-formulario label {
-  width: 100px;
-  margin-top: 10px;
-  margin-right: 0;
-  font-weight: bold;
-}
-
-.linha-formulario select {
-  flex: 1;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #47a7da;
-}
-
-button {
-  background-color: #47a7da;
-  color: white;
-  border: none;
-  padding: 10px 250px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-top: 10px;
+  width: 900px;
+  height: 500px;
+  border-radius: 30px;
   position: relative;
-  left: 375px;
-  align-self: center;
-  display: flex;
-  margin-right: 100px;
+  top: 50px;
+  left: 200px;
 }
 
-#horario {
-  margin-top: 30px;
-  text-align: center;
+.formulário label{
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #00146d;
+  position: relative;
+  margin: 50px;
+  bottom: 30px;
+  right: 300px;
+}
+
+#turma,
+#Grau,
+#turno{
+  width: 350px;
+  height: 25px;
+  border: none;
+  position: relative;
+  bottom: 50px;
+  right: 150px;
 }
