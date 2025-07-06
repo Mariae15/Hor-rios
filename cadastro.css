@@ -1,90 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;600&display=swap');
+body{
+  background-color: #70cbff;
+  background-image: url(/img/fundo.png);
+  background-position-x: center;
+  background-position-y: -200px;
+  background-size:2000px;
+}
 
-body {
-    background-color: #70cbff;
-    margin: 0;
-    font-family: "Outfit", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-size: 30px;
-    font-style: normal;
-    background-size: cover;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.logo{
+    font-family: 'Concert One', sans-serif;
+    color: #00146d;
 }
 
 .container {
-    background: white;
-    padding: 40px;
-    border-radius: 12px;
-    text-align: center;
-    width: 100%;
-    max-width: 400px;
-    box-shadow: 0 0 15px white;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  flex-direction: column;
+  background-color: #47a7da;
+  width: 900px;
+  height: 500px;
+  border-radius: 30px;
+  position: relative;
+  top: 50px;
+  left: 200px;
 }
 
-.logo {
-    font-family: 'Concert One', sans-serif;
-    font-size: 32px;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
-    color: #47a7da;
+.container label{
+  color: #00146d;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  position: relative;
+  margin: 20px;
+  bottom: 30px;
+  right: 200px;
 }
 
-.centro{
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#nome,
+#email,
+#senha{
+  width: 450px;
+  height: 25px;
+  border: none;
+  position: relative;
+  bottom: 40px;
 }
 
-.login-form input {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
+button{
+    background-color: #70cbff;
     border: none;
-    border-radius: 6px;
-    background: white;
-    border: 1px solid #47a7da;
-    color: #47a7da;
-    font-size: 16px;
-}
-
-.login-form label{
-    color: #47a7da;
-    font-size: 18px;
-    position: relative;
-    right: 180px;
-} 
-
-.login-form button{
-    width: 100%;
-    padding: 12px;
-    margin-top: 10px;
-    background-color: #47a7da;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
+    border-radius: 20px;
     color: white;
-    justify-content: center
-}
-
-.login-form button:hover {
-   background-color: #327295;
-}
-
-.cadastro-link p{
-    color: #47a7da;
-    font-size: 15px;
-}
-
-.cadastro-link a{
-    text-decoration: none;
-    color: #2d88b9;
+    font-weight: bolder;
+    height: 30px;
+    width: 430px;
 }
