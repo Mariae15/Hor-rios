@@ -13,30 +13,34 @@
   <main>
   <div class="formulário">
       <label for="turma">Turma:</label>
-      <select id="turma">
-        <option class="escolha" value="">Escolha</option>
-        <option value="6A">6º A</option>
-        <option value="6B">6º B</option>
-        <option value="7A">7º A</option>
+      <select id="turma" required>
+        <option class="escolha" value="" disabled selected>Escolha</option>
+        <option value="DS">DS</option>
+        <option value="ADM">ADM</option>
+        <option value="BIO">BIO</option>
+        <option value="PORTOS">PORTOS</option>
+        <option value="REGULAR">REGULAR</option>
       </select>
 
- 
       <label for="turma">Grau:</label>
-      <select id="Grau">
-        <option class="escolha" value="">Escolha</option>
-        <option value="6A">primeiro</option>
-        <option value="6B">segundo</option>
-        <option value="7A">terceiro</option>
+      <select id="Grau" required>
+        <option class="escolha" value="" disabled selected>Escolha</option>
+        <option value="1">primeiro</option>
+        <option value="2">segundo</option>
+        <option value="3">terceiro</option>
       </select>
 
       <label for="turno">Turno:</label>
-      <select id="turno">
-        <option class="escolha" value="">Escolha</option>
+      <select id="turno" required>
+        <option class="escolha" value="" disabled selected>Escolha</option>
         <option value="manha">Manhã</option>
         <option value="tarde">Tarde</option>
         <option value="noite">Noite</option>
       </select>
  
+      <button id="botao" type="submit">Procurar</button>
+
+      <div id="resultado" style="margin-top: 20px; font-size: 18px;"></div>
 
   </div>
   </main>

@@ -25,33 +25,43 @@ body{
   left: 200px;
 }
 
-.container label{
+form label {
   color: #00146d;
-  font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
   position: relative;
-  margin: 20px;
-  bottom: 30px;
-  right: 200px;
+  bottom: 0px;
+  left: 150px;
 }
 
-#nome,
-#email,
-#senha{
-  width: 450px;
+form input {
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 600px;
   height: 25px;
   border: none;
   position: relative;
-  bottom: 40px;
+  left: 150px;
 }
 
-button{
-    background-color: #70cbff;
-    border: none;
-    border-radius: 20px;
-    color: white;
-    font-weight: bolder;
-    height: 30px;
-    width: 430px;
+form button {
+  width: 600px;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: relative;
+  left: 150px;
+}
+
+form button:hover {
+  background-color: #2980b9;
 }

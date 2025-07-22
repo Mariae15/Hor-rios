@@ -31,6 +31,23 @@ body{
   right: 300px;
 }
 
+#botao{
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#botao:hover {
+  background-color: #2980b9;
+}
+
 #turma,
 #Grau,
 #turno{
@@ -40,4 +57,10 @@ body{
   position: relative;
   bottom: 50px;
   right: 150px;
+}
+
+
+
+select:invalid{
+  border: 2px solid red;
 }

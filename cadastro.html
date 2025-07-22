@@ -12,21 +12,71 @@
 <body>
   <div class="container">
     <h2 class="logo">Cadastro</h2>
-    <form action="processa_cadastro.php" method="POST">
-    <div class="login-form">
-    <div class="centro">
-    <label>Nome:</label>
-    <input type="text" name="nome" required>
+    <form onsubmit="event.preventDefault(); cadastrarUsuario();" id="cadastroForm">
+    <label id="nome1">Nome:</label>
+    <input id="nome" type="text" placeholder="Nome" name="nome" required>
 
     <label>Email:</label>
-    <input type="email" name="email" required>
+    <input id="email" type="email" placeholder="Email" name="email" required>
 
     <label>Senha:</label>
-    <input type="password" name="senha" required>
-    </div>
+    <input id="senha" type="password" placeholder="Senha" name="senha" required>
 
-    <button  type="submit">Cadastrar</button>
-    </div>
+    <button class="btn btn-sucess w-100" type="submit">Cadastrar</button>
   </form>
+  </div>
+
+ <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+ <script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyD84jgoHZ72CYlBLDoXcDf-HOHMTNkEz8s",
+    authDomain: "cadastro-69a82.firebaseapp.com",
+    databaseURL: "https://cadastro-69a82-default-rtdb.firebaseio.com",
+    projectId: "cadastro-69a82",
+    storageBucket: "cadastro-69a82.firebasestorage.app",
+    messagingSenderId: "1082172217927",
+    appId: "1:1082172217927:web:573cd5a9cbe19a570aef62"
+  };
+
+  if(!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+    console.log("Firebase Carregado")
+  }
+
+  function cadastrarUsuario(){
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value
+
+    if (!nome || !email || !senha) {
+      alert("Preencha os Campos")
+      return;
+    }
+
+    firebase.auth().createUserWithEmailAndPassword(email,senha)
+    .then((userCredencial) =>{
+      const userId = userCredencial.user.uid;
+
+      firebase.database().ref("clientes/" + userId).set({
+        nome: nome,
+        email: email
+      })
+      .then(()=>{
+        console.log("Cadastro realizado com sucesso");
+        setTimeout(()=>{
+          window.location.href = "confg.html";
+        }, 1500);
+      })
+      .catch( (error)=>{
+        console.log("Erro ao salvar no banco", error.message);
+      })
+    }).catch( (error) =>{
+      console.log("Erro ao cadastrar:", error.message);
+    })
+  }
+ </script>
+
 </body>
 </html>
