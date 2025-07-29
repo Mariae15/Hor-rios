@@ -13,7 +13,6 @@ if (!firebase.apps.length) {
   console.log("Firebase Carregado");
 }
 
-// Mapeamento de horários e dias para ID das células
 const mapaHorario = {
   "07:30": "07",
   "08:20": "08",
@@ -31,7 +30,6 @@ const diaMapeado = {
   "Sexta": "sex"
 };
 
-// Função para salvar no Firestore com idCelula
 function salvarPresencaNoFirestore(professor) {
   const horarioID = mapaHorario[professor.horario];
   const diaID = diaMapeado[professor.dia];
@@ -56,8 +54,6 @@ firebase.firestore().collection("presencas").doc(idCelula).set({
 });
 
 }
-
-// Lista dos professores e horários fixos
 const professores = [
   { nome: "Gabriel", dia: "Segunda", turma: "DS3", matéria: "Programação Des. de Sist.", horario: "10:20", status: "presente" },
   { nome: "Gabriel", dia: "Segunda", turma: "DS1", matéria: "Int Pr", horario: "11:10", status: "presente" },
@@ -69,7 +65,6 @@ const professores = [
   { nome: "Gabriel", dia: "Sexta", turma: "DS3", matéria: "Programação Des. de Sist.", horario: "12:00", status: "presente" }
 ];
 
-// Renderiza a tabela com os botões
 const lista = document.getElementById("lista-professores");
 
 function renderizarTabela() {
@@ -99,5 +94,4 @@ function marcarPresenca(index, status) {
   salvarPresencaNoFirestore(professores[index]);
 }
 
-// Inicializa a tabela ao carregar
 renderizarTabela();
