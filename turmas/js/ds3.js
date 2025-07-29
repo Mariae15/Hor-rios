@@ -74,7 +74,6 @@ firebase.firestore()
           celula.innerHTML = `<strong>${dados.matéria}</strong><br><small>${dados.nome}</small>`;
 
 
-          // Remove manualmente as classes anteriores
           celula.classList.remove("presente", "ausente");
 
           const status = dados.status?.trim().toLowerCase();
