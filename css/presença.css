@@ -1,0 +1,73 @@
+    body {
+      background-color: #70cbff;
+      background-image: url(/img/fundo.png);
+      background-position-x: center;
+      background-position-y: -200px;
+      background-size:2000px;
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 35px;
+      background-color: #70cbff;
+      margin-bottom: 20px;
+      font-family: 'Outfit', sans-serif;
+      color: white;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      display: block;
+      background-color: #3498db;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px white;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+    }
+
+    td{
+      border: 1px solid white;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+
+    button {
+      padding: 6px 12px;
+      margin: 2px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .presente {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .ausente {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .status {
+      font-weight: bold;
+    }
+
+    #dia{
+      border-top-left-radius: 20px;
+    }
+
+    #ações{
+      border-top-right-radius: 20px;
+    }

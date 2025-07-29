@@ -1,0 +1,50 @@
+body{
+    background-color: #70cbff;
+}
+
+.topic {
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    background-color: white; 
+    color: black; 
+    padding: 10px;
+    width: 200px; 
+    min-height: 65px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 30px; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+    transition: transform 0.3s;
+}
+
+.topic-container{
+    justify-content: space-between;
+    margin: 20px;
+    display: flex;
+    gap: 20px; 
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+}
+
+.topic-titulo{
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    background-color: white; 
+    color: black; 
+    padding: 5px;
+    width: 600px; 
+    min-height: 65px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 30px; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+}

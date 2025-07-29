@@ -1,49 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login </title>
-  <link rel="stylesheet" href="login.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Login </title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="img/agv.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <h1 class="logo">Login</h1>
-    <form class="login-form" onsubmit="return validarLogin()">
+        <h1 class="logo">Login</h1>
+  <form class="login-form" onsubmit="loginUsuario()">
     <div class="centro">
-      <input type="text" id="username" placeholder="Usuário" required />
-      <input type="password" id="password" placeholder="Senha" required />
+      <label>Email:</label>
+        <input type="text" id="username" placeholder="Usuário" class="input-field" required />
+      <Label>Senha:</Label>
+        <input type="password" id="password" placeholder="Senha" class="input-field" required />
       <button type="submit">ENTRAR</button>
-    </div>
-      <p id="error-message"></p>
-    </form>
+  </div>
+        <p id="error-message"></p>
+  </form>
 
-      <div class="cadastro-link">
-         <p>Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
-      </div>
+  <div class="cadastro-link">
+      <p>Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
+  </div>
 
   </div>
 </div>
 
  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
- <script>
-  const firebaseConfig = {
-    apiKey: "AIzaSyD84jgoHZ72CYlBLDoXcDf-HOHMTNkEz8s",
-    authDomain: "cadastro-69a82.firebaseapp.com",
-    databaseURL: "https://cadastro-69a82-default-rtdb.firebaseio.com",
-    projectId: "cadastro-69a82",
-    storageBucket: "cadastro-69a82.firebasestorage.app",
-    messagingSenderId: "1082172217927",
-    appId: "1:1082172217927:web:573cd5a9cbe19a570aef62"
-  };
-
-  if(!firebase.apps.length) {
-    firebase.initializeApp(firebaseConfig);
-    console.log("Firebase Carregado")
-  }
- </script>
+ <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+ <script src="js/login.js"></script>
 </body>
 </html>
