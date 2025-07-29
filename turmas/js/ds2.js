@@ -73,7 +73,6 @@ firebase.firestore()
         if (celula) {
           celula.textContent = dados.matéria;
 
-          // Remove manualmente as classes anteriores
           celula.classList.remove("presente", "ausente");
 
           const status = dados.status?.trim().toLowerCase();
