@@ -62,22 +62,28 @@ for (const id in gradeAulas) {
 
 firebase.firestore()
   .collection("presencas")
-  .orderBy("data", "desc")
   .onSnapshot((snapshot) => {
     snapshot.forEach((doc) => {
       const dados = doc.data();
-         console.log("Presença recebida:", doc.data());
+
+      console.log("Presença recebida:", dados);
 
       if (dados.turma === "DS1") {
         const celula = document.getElementById(dados.idCelula);
         if (celula) {
           celula.textContent = dados.matéria;
+
+          // Remove manualmente as classes anteriores
           celula.classList.remove("presente", "ausente");
 
-          if (dados.status.toLowerCase() === "ausente") {
+          const status = dados.status?.trim().toLowerCase();
+
+          if (status === "ausente") {
             celula.classList.add("ausente");
-          } else {
+          } else if (status === "presente") {
             celula.classList.add("presente");
+          } else {
+            console.warn("Status desconhecido:", status);
           }
         }
       }

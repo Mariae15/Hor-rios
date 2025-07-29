@@ -38,22 +38,23 @@ function salvarPresencaNoFirestore(professor) {
 
   const idCelula = `${diaID}-${horarioID}`;
 
-  firebase.firestore().collection("presencas").add({
-    nome: professor.nome,
-    dia: professor.dia,
-    turma: professor.turma,
-    matéria: professor.matéria,
-    horário: professor.horario,
-    status: professor.status,
-    idCelula: idCelula,
-    data: new Date()
-  })
-  .then(() => {
-    console.log("Presença salva com sucesso!");
-  })
-  .catch((error) => {
-    console.error("Erro ao salvar presença:", error);
-  });
+firebase.firestore().collection("presencas").doc(idCelula).set({
+  nome: professor.nome,
+  dia: professor.dia,
+  turma: professor.turma,
+  matéria: professor.matéria,
+  horário: professor.horario,
+  status: professor.status,
+  idCelula: idCelula,
+  data: new Date()
+})
+.then(() => {
+  console.log("Presença salva (ou atualizada) com sucesso!");
+})
+.catch((error) => {
+  console.error("Erro ao salvar presença:", error);
+});
+
 }
 
 // Lista dos professores e horários fixos
