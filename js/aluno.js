@@ -8,7 +8,9 @@ document.getElementById("botao").addEventListener("click", () => {
     return;
   }
 
+  // Monta o nome da página: ex: ds3manha.html
   const pagina = `turmas/${turma.toLowerCase()}${grau}${turno.toLowerCase()}.html`;
 
+  // Verifica se a página existe? (opcional – requer backend). Aqui só redireciona:
   window.location.href = pagina;
 });

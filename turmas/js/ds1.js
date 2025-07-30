@@ -68,10 +68,10 @@ firebase.firestore()
 
       console.log("Presença recebida:", dados);
 
-      if (dados.turma === "DS1") {
+       if (dados.turma === "DS1") {
         const celula = document.getElementById(dados.idCelula);
         if (celula) {
-          celula.textContent = dados.matéria;
+          celula.innerHTML = `<strong>${dados.matéria}</strong><br><small>${dados.nome}</small>`;
 
           celula.classList.remove("presente", "ausente");
 

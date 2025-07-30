@@ -40,13 +40,15 @@ const firebaseConfig = {
       auth.onAuthStateChanged((user) => {
     if (user) {
       console.log("Usuário logado:", user.email);
+      // Aqui você pode ativar os recursos do professor, por exemplo
     } else {
       console.log("Nenhum usuário logado");
       function bloquearRecursosDoProfessor() {
-          
+  // Ocultar a coluna "Ação"
   const colunas = document.querySelectorAll(".col-acao");
   colunas.forEach(col => col.style.display = "none");
 
+  // Se quiser, desabilite botões
   const botoes = document.querySelectorAll(".botao-presenca");
   botoes.forEach(btn => btn.style.display = "none");
 }
