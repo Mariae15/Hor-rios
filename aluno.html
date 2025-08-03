@@ -12,39 +12,52 @@
 </head>
 <body>
   <main>
-  <div class="formulário">
-      <label for="turma">Turma:</label>
-      <select id="turma" required>
-        <option class="escolha" value="" disabled selected>Escolha</option>
-        <option value="DS">DS</option>
-        <option value="ADM">ADM</option>
-        <option value="BIO">BIO</option>
-        <option value="PORTOS">PORTOS</option>
-        <option value="REGULAR">REGULAR</option>
-      </select>
+    <div class="container-pagina">
+        <div class="formulário">
+            <label for="turma">Turma:</label>
+            <select id="turma" required>
+              <option class="escolha" value="" disabled selected>Escolha</option>
+              <option value="DS">DS</option>
+              <option value="ADM">ADM</option>
+              <option value="BIO">BIO</option>
+              <option value="PORTOS">PORTOS</option>
+              <option value="REGULAR">REGULAR</option>
+            </select>
 
-      <label for="turma">Grau:</label>
-      <select id="Grau" required>
-        <option class="escolha" value="" disabled selected>Escolha</option>
-        <option value="1">PRIMEIRO</option>
-        <option value="2">SEGUNDO</option>
-        <option value="3">TERCEIRO</option>
-      </select>
+            <label for="turma">Grau:</label>
+            <select id="Grau" required>
+              <option class="escolha" value="" disabled selected>Escolha</option>
+              <option value="1">PRIMEIRO</option>
+              <option value="2">SEGUNDO</option>
+              <option value="3">TERCEIRO</option>
+            </select>
 
-      <label for="turno">Turno:</label>
-      <select id="turno" required>
-        <option class="escolha" value="" disabled selected>Escolha</option>
-        <option value="manha">MANHÃ</option>
-        <option value="tarde">TARDE</option>
-        <option value="noite">NOITE</option>
-      </select>
- 
-      <button id="botao" type="submit">Procurar</button>
+            <label for="turno">Turno:</label>
+            <select id="turno" required>
+              <option class="escolha" value="" disabled selected>Escolha</option>
+              <option value="manha">MANHÃ</option>
+              <option value="tarde">TARDE</option>
+              <option value="noite">NOITE</option>
+            </select>
+      
+            <button id="botao" type="submit">Procurar</button>
+        </div>
+
+    <div class="avisos-section">
+        <section class="avisos-section">
+          <h2>📢 Avisos da Coordenação</h2>
+          <ul id="lista-avisos">
+            <li>Carregando avisos...</li>
+          </ul>
+        </section>
+    </div>
 
   </div>
   </main>
   </header>
 
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
   <script src="js/aluno.js"></script>
 </body>
 </html>

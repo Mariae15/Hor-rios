@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro de Usuário</title>
+  <link rel="stylesheet" href="css/cadastro.css">
+  <link rel="icon" href="img/agv.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h2 class="logo">Cadastro</h2>
+    <form onsubmit="event.preventDefault(); cadastrarUsuario();" id="cadastroForm">
+    <label id="nome1">Nome:</label>
+    <input id="nome" type="text" autocomplete="off" placeholder="Nome" name="nome" required>
+
+    <label>Email:</label>
+    <input id="email" type="email" autocomplete="off" placeholder="Email" name="email" required>
+
+    <label>Senha:</label>
+    <input id="senha" type="password" placeholder="Senha" name="senha" onclick="apareceFrase()" ondblclick="desapareceFrase()" required>
+    <br>
+      <small id="senhaDica">
+      A senha deve ter pelo menos: <br>
+        • 8 caracteres; <br>
+        • Uma letra maiúscula; <br>
+        • Um número; <br>
+        • Um símbolo. <br>
+      </small>
+
+
+    <button class="btn btn-sucess w-100" type="submit">Cadastrar</button>
+  </form>
+  </div>
+
+ <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+ <script src="js/cadastro_pedagogos.js"></script>
+
+</body>
+</html>

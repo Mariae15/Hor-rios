@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Presença dos Professores</title>
+  <link rel="stylesheet" href="css/presença.css">
+  <link rel="icon" href="img/agv.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+
+  <h2>Controle de Presença</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th id="dia">Dia</th>
+        <th>Turma</th>
+        <th>Matéria</th>
+        <th>Horário</th>
+        <th>Status</th>
+        <th id="ações">Ações</th>
+      </tr>
+    </thead>
+    <tbody id="lista-professores">
+    </tbody>
+  </table>
+
+    </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="js/presença.js"></script>
+
+</body>
+</html>

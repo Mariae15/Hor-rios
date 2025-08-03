@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel do Pedagogo</title>
+  <link rel="stylesheet" href="css/pedagogo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Escrever Aviso</h1>
+    <textarea id="aviso" placeholder="Digite o aviso para os alunos..."></textarea>
+    <button onclick="enviarAviso()">Enviar Aviso</button>
+    <p id="status-msg"></p>
+
+    <h2 style="margin-top: 40px;">Avisos enviados</h2>
+    <ul id="lista-avisos"></ul>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="js/pedagogia.js"></script>
+</body>
+</html>
