@@ -32,7 +32,7 @@ function enviarAviso() {
   .then(() => {
     statusMsg.textContent = "✅ Aviso enviado com sucesso!";
     statusMsg.style.color = "green";
-    document.getElementById("aviso").value = ""; // limpa o campo
+    document.getElementById("aviso").value = ""; 
   })
   .catch((error) => {
     statusMsg.textContent = "❌ Erro ao enviar aviso: " + error;
@@ -99,3 +99,18 @@ db.collection("avisos")
       lista.appendChild(li);
     });
   });
+
+  document.getElementById("botao").addEventListener("click", () => {
+  const turma = document.getElementById("turma").value;
+  const grau = document.getElementById("Grau").value;
+  const turno = document.getElementById("turno").value;
+
+  if (!turma || !grau || !turno) {
+    alert("Por favor, selecione todos os campos.");
+    return;
+  }
+
+  const pagina = `turmas_pedagogia/${turma.toLowerCase()}${grau}${turno.toLowerCase()}.html`;
+
+  window.location.href = pagina;
+});

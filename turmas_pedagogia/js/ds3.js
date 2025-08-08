@@ -13,7 +13,6 @@ if (!firebase.apps.length) {
   console.log("Firebase Carregado");
 }
 
-
 const gradeAulas = {
   "seg-07": { nome: "Dionata", materia: "R. Matemática" },
   "ter-07": { nome: "Juliana Albini", materia: "Banco de Dados" },
@@ -81,6 +80,7 @@ firebase.firestore()
     }
   });
 
+
 firebase.firestore()
   .collection("presencas")
   .onSnapshot((snapshot) => {
@@ -126,14 +126,32 @@ function soltar(event) {
 
   const idOrigem = event.dataTransfer.getData("text/plain");
   const origem = document.getElementById(idOrigem);
-  const destino = event.target;
 
-  if (!destino.classList.contains("intervalo")) {
-    const temp = origem.innerHTML;
-    origem.innerHTML = destino.innerHTML;
-    destino.innerHTML = temp;
-
-    salvarNovaDistribuicao(origem.id, origem.innerHTML);
-    salvarNovaDistribuicao(destino.id, destino.innerHTML);
+  let destino = event.target;
+  while (destino && destino.tagName !== "TD") {
+    destino = destino.parentElement;
   }
+
+  if (!origem || !destino || destino.classList.contains("intervalo")) return;
+
+  const temp = origem.innerHTML;
+  origem.innerHTML = destino.innerHTML;
+  destino.innerHTML = temp;
+
+  salvarNovaDistribuicao(origem.id, origem.innerHTML);
+  salvarNovaDistribuicao(destino.id, destino.innerHTML);
 }
+
+
+function salvarNovaDistribuicao(celulaId, conteudoHTML) {
+  const tempDiv = document.createElement("div");
+  tempDiv.innerHTML = conteudoHTML;
+
+  const materia = tempDiv.querySelector("strong")?.textContent || "";
+  const nome = tempDiv.querySelector("small")?.textContent || "";
+
+  firebase.firestore().collection("horarios").doc("ds3").set({
+    [celulaId]: { nome, materia }
+  }, { merge: true });
+}
+

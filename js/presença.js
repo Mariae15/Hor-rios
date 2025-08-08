@@ -95,5 +95,4 @@ function marcarPresenca(index, status) {
   salvarPresencaNoFirestore(professores[index]);
 }
 
-// Inicializa a tabela ao carregar
 renderizarTabela();

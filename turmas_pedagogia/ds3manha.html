@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Desenvolvimento de Sistemas 3</title>
+    <link rel="stylesheet" href="css/ds3manha.css">
+    <link rel="icon" href="../img/agv.png">
+</head>
+<body>
+    <div class="titulo">
+        <h3 class="topic-titulo">DESENVOLVIMENTO DE SISTEMAS 3</h3>
+    </div>
+
+<table id="tabela-horarios">
+  <thead>
+    <tr>
+    <div class="topic-container">
+      <th class="topic">Horário</th>
+      <th class="topic">Segunda</th>
+      <th class="topic">Terça</th>
+      <th class="topic">Quarta</th>
+      <th class="topic">Quinta</th>
+      <th class="topic">Sexta</th>
+    </div>
+    </tr>
+  </thead>
+   <tbody>
+    <tr>
+      <td class="topic">07:30</td>
+      <td id="seg-07" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+      <td id="ter-07" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+      <td id="qua-07" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+      <td id="qui-07" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+      <td id="sex-07" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+    </tr>
+    <tr>
+      <td class="topic">08:20</td>
+      <td id="seg-08" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+      <td id="ter-08" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+      <td id="qua-08" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+      <td id="qui-08" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+      <td id="sex-08" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+    </tr>
+    <td class="topic">09:10</td>
+      <td id="seg-09" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+      <td id="ter-09" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+      <td id="qua-09" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+      <td id="qui-09" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+      <td id="sex-09" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+    </tr>
+    <td class="topic">10:00</td>
+      <td class="intervalo"></td>
+      <td class="intervalo"></td>
+      <td class="intervalo"></td>
+      <td class="intervalo"></td>
+      <td class="intervalo"></td>
+    </tr>
+    <td class="topic">10:20</td>
+      <td id="seg-10-2" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+      <td id="ter-10-2" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+      <td id="qua-10-2" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+      <td id="qui-10-2" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+      <td id="sex-10-2" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+    </tr>
+    <td class="topic">11:10</td>
+      <td id="seg-11" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+      <td id="ter-11" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+      <td id="qua-11" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+      <td id="qui-11" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+      <td id="sex-11" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+    </tr>
+    <td class="topic">12:00</td>
+      <td id="seg-12" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+      <td id="ter-12" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+      <td id="qua-12" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+      <td id="qui-12" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+      <td id="sex-12" draggable="true" ondragstart="arrastar(event)" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></td>
+    </tr>
+   </tbody>
+</table>
+
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="js/ds3.js"></script>
+</html>

@@ -65,3 +65,4 @@ document.getElementById('senhaDica').style.display = 'block'
 function desapareceFrase() {
     document.getElementById('senhaDica').style.display = 'none'
 }
+
